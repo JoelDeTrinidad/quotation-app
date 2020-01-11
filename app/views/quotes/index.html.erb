@@ -1,0 +1,35 @@
+<div class="container">
+    <%= form_tag(main_app.quotes_path, method: "get", class: 'form') do %>
+    <%= select_tag :filter, options_for_select(Coin.all.map{|c| c.name}, params[:filter]) %>
+    <%= submit_tag 'Filter' %>
+    <% end %>
+    <%= line_chart @line_chart_data %>
+    <div>
+        <h1>Quotes</h1>
+        <table class="style-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Price</th>
+              <th>Variation</th>
+              <th>Refernce</th>
+            </tr>
+          </thead>
+        
+          <tbody>
+            <% @quotes.each do |quote| %>
+              <tr>
+                <td><%= quote.date %></td>
+                <td><%= quote.price %></td>
+                <td><%= quote.variation %></td>
+                <td><%= quote.refernce %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+        
+        <br>
+    </div>
+    
+
+</div>

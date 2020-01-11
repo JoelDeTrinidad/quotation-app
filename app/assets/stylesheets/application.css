@@ -1,0 +1,44 @@
+@import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Lato:400,900');
+@import url('https://fonts.googleapis.com/css?family=Anton');
+
+body {
+  color: #1c3643;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  margin: 0;
+  background-color: #f3f3f3;
+  text-align: center;
+}
+
+.anton {
+  font-family: 'Anton', sans-serif;
+}
+
+.lato {
+  font-family: 'Lato', sans-serif;
+}
+
+nav.navbar {
+  background: -webkit-linear-gradient(0deg, #27434c 0, #35596f 25%, #1e5372);
+  a, p {
+    color: #fff;
+  }
+  p {
+    margin-bottom: 0;
+  }
+  .nav-item {
+    &:last-child {
+      padding-left: .5em;
+      padding-right: 0;
+    }
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+.style-table {
+  width: 100%;
+}
+
